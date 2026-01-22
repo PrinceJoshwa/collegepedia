@@ -201,7 +201,7 @@ export default function CertificationsCoursesSection() {
                         className="space-y-6"
                     >
                         <p className="text-sm font-semibold text-slate-600 dark:text-slate-400">More Courses Available:</p>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
                             {[
                                 "/course4.jpeg",
                                 "/course5.jpeg",
