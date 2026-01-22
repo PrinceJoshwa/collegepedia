@@ -350,6 +350,7 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight, Sparkles, TrendingUp, Users, Award, Briefcase, CheckCircle2, Star } from "lucide-react"
+import Link from "next/link"
 
 export default function HeroSection() {
     return (
@@ -624,34 +625,38 @@ export default function HeroSection() {
                         transition={{ duration: 0.6, delay: 0.7 }}
                         className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
                     >
-                        <motion.button
-                            whileHover={{ scale: 1.05, y: -3 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="group relative px-10 py-5 rounded-full bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground font-bold shadow-2xl hover:shadow-3xl transition-all inline-flex items-center gap-3 overflow-hidden"
-                        >
-                            {/* Animated shine effect */}
+                        <Link href="#students">
                             <motion.div
-                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                                animate={{
-                                    x: ["-200%", "200%"],
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    repeat: Infinity,
-                                    repeatDelay: 1,
-                                }}
-                            />
-                            <span className="relative z-10 text-lg">Start Your Journey</span>
-                            <ArrowRight className="relative z-10 w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                        </motion.button>
+                                whileHover={{ scale: 1.05, y: -3 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="group relative px-10 py-5 rounded-full bg-gradient-to-r from-primary via-accent to-primary text-primary-foreground font-bold shadow-2xl hover:shadow-3xl transition-all inline-flex items-center gap-3 overflow-hidden cursor-pointer"
+                            >
+                                {/* Animated shine effect */}
+                                <motion.div
+                                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                                    animate={{
+                                        x: ["-200%", "200%"],
+                                    }}
+                                    transition={{
+                                        duration: 2,
+                                        repeat: Infinity,
+                                        repeatDelay: 1,
+                                    }}
+                                />
+                                <span className="relative z-10 text-lg">Start Your Journey</span>
+                                <ArrowRight className="relative z-10 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                            </motion.div>
+                        </Link>
 
-                        <motion.button
-                            whileHover={{ scale: 1.05, y: -3 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-10 py-5 rounded-full border-2 border-border bg-background/50 backdrop-blur-xl text-foreground font-bold hover:border-primary/50 transition-all shadow-lg text-lg"
-                        >
-                            Explore Programs
-                        </motion.button>
+                        <Link href="#programs">
+                            <motion.div
+                                whileHover={{ scale: 1.05, y: -3 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-10 py-5 rounded-full border-2 border-border bg-background/50 backdrop-blur-xl text-foreground font-bold hover:border-primary/50 transition-all shadow-lg text-lg cursor-pointer flex items-center justify-center"
+                            >
+                                Explore Programs
+                            </motion.div>
+                        </Link>
                     </motion.div>
 
                     {/* Enhanced Scroll Indicator - Reduced spacing pt-16 to pt-8 */}
